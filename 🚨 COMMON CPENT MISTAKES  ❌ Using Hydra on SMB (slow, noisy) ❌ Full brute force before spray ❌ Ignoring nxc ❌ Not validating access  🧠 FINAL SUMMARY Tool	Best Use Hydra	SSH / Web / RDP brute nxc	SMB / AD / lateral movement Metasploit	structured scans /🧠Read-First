@@ -1,0 +1,17 @@
+🚨 COMMON CPENT MISTAKES
+
+❌ Using Hydra on SMB (slow, noisy)
+❌ Full brute force before spray
+❌ Ignoring nxc
+❌ Not validating access
+
+🧠 FINAL SUMMARY
+Tool	                        Best Use
+Hydra	                        SSH / Web / RDP brute
+nxc	                          SMB / AD / lateral movement
+Metasploit	                  structured scans / reporting
+
+🔥 ONE-LINE MEMORY
+Hydra = service brute
+nxc = AD attack engine
+Metasploit = structured automation
